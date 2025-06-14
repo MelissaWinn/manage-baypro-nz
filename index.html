@@ -1,200 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bay Property Projects</title>
+  <title>BayProNZ</title>
   <style>
-    :root {
-      --blue: #042b67;
-      --grey: #f2f2f2;
-      --brown: #7b4015;
-      --black: #000000;
-    }
-    body {
+    html, body {
       margin: 0;
-      font-family: Verdana, sans-serif;
-      background-color: var(--grey);
+      padding: 0;
       overflow: hidden;
+      font-family: Verdana, sans-serif;
+      background-color: #f2f2f2;
     }
-    .section {
+    section {
+      width: 100vw;
       height: 100vh;
-      width: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 2rem;
-      box-sizing: border-box;
-      position: absolute;
-      top: 100vh;
-      transition: transform 0.5s ease-in-out;
-    }
-    .visible {
-      transform: translateY(-100vh);
+      transition: transform 0.5s ease;
     }
     h1 {
       font-family: 'Shutterstone', cursive;
       font-size: 2.5rem;
-      color: var(--blue);
-      margin-bottom: 1rem;
+      color: #042b67;
+      margin: 0;
     }
     p {
+      font-family: Verdana, sans-serif;
       font-size: 1.2rem;
-      color: var(--black);
-      line-height: 1.5;
-      max-width: 85%;
+      color: #000;
+      max-width: 80%;
     }
-    .shapes {
-      position: absolute;
-      z-index: 0;
-    }
-    .square {
-      width: 12px;
-      height: 12px;
-      background: var(--brown);
-    }
-    .circle {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--brown);
-    }
-    .scribble {
-      width: 40px;
-      height: 4px;
-      background: var(--brown);
-      border-radius: 2px;
-    }
-    .swipe {
-      position: absolute;
-      bottom: 20px;
-      font-family: 'Lato', sans-serif;
-      font-size: 0.9rem;
-      color: var(--black);
+    .swipe-text {
+      font-family: 'Lato Light', sans-serif;
+      margin-top: 2rem;
+      color: #000;
     }
     .menu-icon {
       position: absolute;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
+      bottom: 1rem;
+      right: 1rem;
+      cursor: pointer;
     }
-    .menu-icon span {
-      width: 24px;
-      height: 3px;
-      background-color: var(--blue);
-    }
-    .button {
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: var(--blue);
-      color: white;
-      border: none;
-      font-size: 1rem;
-      border-radius: 4px;
+    .accent {
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      background-color: #7b4015;
     }
   </style>
 </head>
 <body>
-
-  <!-- Page Sections -->
-  <div class="section" style="top: 0;">
-    <div class="shapes square" style="top: 10%; left: 10%;"></div>
-    <div class="shapes square" style="top: 20%; right: 20%;"></div>
-    <div class="shapes circle" style="bottom: 25%; left: 30%;"></div>
-    <div class="shapes scribble" style="top: 35%; right: 30%;"></div>
-    <h1>What We Do…</h1>
-    <p>Property Management & Visitor Accommodation</p>
-    <div class="swipe">swipe up ↑</div>
-    <div class="menu-icon"><span></span><span></span><span></span></div>
-  </div>
-
-  <div class="section">
-    <div class="shapes square" style="top: 15%; left: 15%;"></div>
-    <div class="shapes square" style="bottom: 10%; right: 15%;"></div>
-    <div class="shapes circle" style="top: 35%; left: 40%;"></div>
-    <div class="shapes scribble" style="top: 45%; left: 30%;"></div>
-    <h1>Where?</h1>
-    <p>Omokoroa<br>Whakamaramara<br>Te Puna<br>Bethlehem<br>Tauranga<br>Tauriko<br>Welcome Bay<br>Mount Maunganui</p>
-    <div class="swipe">swipe up ↑</div>
-    <div class="menu-icon"><span></span><span></span><span></span></div>
-  </div>
-
-  <div class="section">
-    <div class="shapes square" style="top: 12%; left: 20%;"></div>
-    <div class="shapes circle" style="bottom: 20%; right: 25%;"></div>
-    <div class="shapes scribble" style="top: 38%; left: 25%;"></div>
-    <h1>Who We Help…</h1>
-    <p>Homeowners heading away for a period<br><br>Holiday home owners who use their property only periodically<br><br>Property investors in need of full-time property management</p>
-    <div class="swipe">swipe up ↑</div>
-    <div class="menu-icon"><span></span><span></span><span></span></div>
-  </div>
-
-  <div class="section">
-    <div class="shapes square" style="top: 10%; right: 10%;"></div>
-    <div class="shapes circle" style="top: 30%; left: 30%;"></div>
-    <div class="shapes scribble" style="top: 50%; right: 25%;"></div>
-    <h1>What We Offer…</h1>
-    <p>Setup, styling & guest-ready prep<br><br>Full service property management & hosting services<br><br>Sustainable systems</p>
-    <div class="swipe">swipe up ↑</div>
-    <div class="menu-icon"><span></span><span></span><span></span></div>
-  </div>
-
-  <div class="section">
-    <div class="shapes square" style="top: 10%; left: 15%;"></div>
-    <div class="shapes circle" style="top: 40%; right: 20%;"></div>
-    <div class="shapes scribble" style="top: 48%; left: 28%;"></div>
-    <h1>To Get Started…</h1>
-    <p>12 month minimum contract<br><br>Sign up fee $490<br><br>Pre-book personal use dates</p>
-    <button class="button">Apply Now</button>
-    <div class="swipe">swipe up ↑</div>
-    <div class="menu-icon"><span></span><span></span><span></span></div>
-  </div>
-
-  <div class="section">
-    <div class="shapes square" style="top: 10%; left: 25%;"></div>
-    <div class="shapes circle" style="bottom: 25%; right: 30%;"></div>
-    <div class="shapes scribble" style="top: 50%; left: 25%;"></div>
-    <h1>Questions?</h1>
-    <p>022 698 0163<br>manage@baypro.nz</p>
-    <button class="button">Download Setup Guide</button>
-    <div class="swipe">swipe up ↑</div>
-    <div class="menu-icon"><span></span><span></span><span></span></div>
-  </div>
-
-  <script>
-    const sections = document.querySelectorAll(".section");
-    let currentIndex = 0;
+  <div id="pages">
+    <section class="page" id="page1">
+      <h1>What We Do...</h1>
+      <p>Property Management & Visitor Accommodation</p>
+      <div class="swipe-text">swipe ↑</div>
+    </section>
+    <section class="page" id="page2">
+      <h1>Where?</h1>
+      <p>Omokoroa, Whakamarama, Te Puna, Bethlehem, Tauranga, Tauriko, Welcome Bay, Mount Maunganui</p>
+      <div class="swipe-text">swipe ↑</div>
+    </section>
+    <!-- Add additional sections for page3 to page6 similarly -->
+  </div>  <script>
+    let currentPage = 0;
+    const sections = document.querySelectorAll('.page');
+    let startY = 0;
+    let endY = 0;
 
     function showPage(index) {
-      sections.forEach((sec, i) => {
-        sec.style.transform = `translateY(${(i - index) * 100}vh)`;
-      });
+      document.getElementById('pages').style.transform = `translateY(-${index * 100}vh)`;
     }
 
-    showPage(currentIndex);
-
-    let touchStartY = 0;
-
-    document.addEventListener("touchstart", (e) => {
-      touchStartY = e.touches[0].clientY;
+    document.addEventListener('touchstart', e => {
+      startY = e.touches[0].clientY;
     });
 
-    document.addEventListener("touchend", (e) => {
-      const touchEndY = e.changedTouches[0].clientY;
-      const deltaY = touchEndY - touchStartY;
-
-      if (deltaY < -30 && currentIndex < sections.length - 1) {
-        currentIndex++;
-        showPage(currentIndex);
-      } else if (deltaY > 30 && currentIndex > 0) {
-        currentIndex--;
-        showPage(currentIndex);
+    document.addEventListener('touchend', e => {
+      endY = e.changedTouches[0].clientY;
+      const threshold = 50;
+      if (startY - endY > threshold && currentPage < sections.length - 1) {
+        currentPage++;
+        showPage(currentPage);
+      } else if (endY - startY > threshold && currentPage > 0) {
+        currentPage--;
+        showPage(currentPage);
       }
     });
-  </script>
-</body>
+  </script></body>
 </html>
