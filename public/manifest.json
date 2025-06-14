@@ -1,0 +1,9 @@
+{
+  "name": "Bay Property Projects",
+  "short_name": "Bay Projects",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2f2f2",
+  "theme_color": "#042b67",
+  "icons": []
+}
