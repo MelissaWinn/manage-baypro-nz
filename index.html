@@ -2,45 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Bay Property Projects - Property Management & Visitor Accommodation in Tauranga."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bay Property Projects</title>
-  <link href="/styles/style.css" rel="stylesheet" />
-  <link rel="manifest" href="/public/manifest.json" />
+  <style>
+    :root {
+      --blue: #042b67;
+      --grey: #f2f2f2;
+      --brown: #7b4015;
+      --black: #000000;
+    }
+    body {
+      margin: 0;
+      font-family: Verdana, sans-serif;
+      background-color: var(--grey);
+      overflow: hidden;
+    }
+    .section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      box-sizing: border-box;
+      position: absolute;
+      top: 100vh;
+      transition: transform 0.5s ease-in-out;
+    }
+    .visible {
+      transform: translateY(-100vh);
+    }
+    h1 {
+      font-family: 'Shutterstone', cursive;
+      font-size: 2.5rem;
+      color: var(--blue);
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      color: var(--black);
+      line-height: 1.5;
+      max-width: 85%;
+    }
+    .shapes {
+      position: absolute;
+      z-index: 0;
+    }
+    .square {
+      width: 12px;
+      height: 12px;
+      background: var(--brown);
+    }
+    .circle {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--brown);
+    }
+    .scribble {
+      width: 40px;
+      height: 4px;
+      background: var(--brown);
+      border-radius: 2px;
+    }
+    .swipe {
+      position: absolute;
+      bottom: 20px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: var(--black);
+    }
+    .menu-icon {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .menu-icon span {
+      width: 24px;
+      height: 3px;
+      background-color: var(--blue);
+    }
+    .button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--blue);
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-  <main class="section" id="section1">
-    <h1>What We Do</h1>
-    <p>Property Management & Visitor Accommodation in Tauranga, Mount Maunganui, Papamoa, Omokoroa, Te Puna, Tauriko & Welcome Bay</p>
-  </main>
-  <main class="section" id="section2">
-    <h1>Who We Help</h1>
-    <ul>
-      <li>✔️ Home owners heading away for a period</li>
-      <li>✔️ Holiday home owners using their property periodically</li>
-      <li>✔️ Investment owners needing full time property management</li>
-    </ul>
-  </main>
-  <main class="section" id="section3">
-    <h1>What We Offer</h1>
-    <ul>
-      <li>✔️ Full service property management</li>
-      <li>✔️ Setup, styling & guest-ready prep</li>
-      <li>✔️ Sustainable systems & maintenance</li>
-    </ul>
-  </main>
-  <main class="section" id="section4">
-    <h1>To Get Started</h1>
-    <ul>
-      <li>12-month minimum contract</li>
-      <li>Owners pre-book personal use dates</li>
-      <li>Sign Up Fee $490</li>
-    </ul>
-    <div class="buttons">
-      <button>Download Setup Guide</button>
-      <button>Apply Now</button>
-    </div>
-  </main>
-  <script src="/scripts/swipe.js"></script>
+
+  <!-- Page Sections -->
+  <div class="section" style="top: 0;">
+    <div class="shapes square" style="top: 10%; left: 10%;"></div>
+    <div class="shapes square" style="top: 20%; right: 20%;"></div>
+    <div class="shapes circle" style="bottom: 25%; left: 30%;"></div>
+    <div class="shapes scribble" style="top: 35%; right: 30%;"></div>
+    <h1>What We Do…</h1>
+    <p>Property Management & Visitor Accommodation</p>
+    <div class="swipe">swipe up ↑</div>
+    <div class="menu-icon"><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="section">
+    <div class="shapes square" style="top: 15%; left: 15%;"></div>
+    <div class="shapes square" style="bottom: 10%; right: 15%;"></div>
+    <div class="shapes circle" style="top: 35%; left: 40%;"></div>
+    <div class="shapes scribble" style="top: 45%; left: 30%;"></div>
+    <h1>Where?</h1>
+    <p>Omokoroa<br>Whakamaramara<br>Te Puna<br>Bethlehem<br>Tauranga<br>Tauriko<br>Welcome Bay<br>Mount Maunganui</p>
+    <div class="swipe">swipe up ↑</div>
+    <div class="menu-icon"><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="section">
+    <div class="shapes square" style="top: 12%; left: 20%;"></div>
+    <div class="shapes circle" style="bottom: 20%; right: 25%;"></div>
+    <div class="shapes scribble" style="top: 38%; left: 25%;"></div>
+    <h1>Who We Help…</h1>
+    <p>Homeowners heading away for a period<br><br>Holiday home owners who use their property only periodically<br><br>Property investors in need of full-time property management</p>
+    <div class="swipe">swipe up ↑</div>
+    <div class="menu-icon"><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="section">
+    <div class="shapes square" style="top: 10%; right: 10%;"></div>
+    <div class="shapes circle" style="top: 30%; left: 30%;"></div>
+    <div class="shapes scribble" style="top: 50%; right: 25%;"></div>
+    <h1>What We Offer…</h1>
+    <p>Setup, styling & guest-ready prep<br><br>Full service property management & hosting services<br><br>Sustainable systems</p>
+    <div class="swipe">swipe up ↑</div>
+    <div class="menu-icon"><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="section">
+    <div class="shapes square" style="top: 10%; left: 15%;"></div>
+    <div class="shapes circle" style="top: 40%; right: 20%;"></div>
+    <div class="shapes scribble" style="top: 48%; left: 28%;"></div>
+    <h1>To Get Started…</h1>
+    <p>12 month minimum contract<br><br>Sign up fee $490<br><br>Pre-book personal use dates</p>
+    <button class="button">Apply Now</button>
+    <div class="swipe">swipe up ↑</div>
+    <div class="menu-icon"><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="section">
+    <div class="shapes square" style="top: 10%; left: 25%;"></div>
+    <div class="shapes circle" style="bottom: 25%; right: 30%;"></div>
+    <div class="shapes scribble" style="top: 50%; left: 25%;"></div>
+    <h1>Questions?</h1>
+    <p>022 698 0163<br>manage@baypro.nz</p>
+    <button class="button">Download Setup Guide</button>
+    <div class="swipe">swipe up ↑</div>
+    <div class="menu-icon"><span></span><span></span><span></span></div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll(".section");
+    let currentIndex = 0;
+
+    function showPage(index) {
+      sections.forEach((sec, i) => {
+        sec.style.transform = `translateY(${(i - index) * 100}vh)`;
+      });
+    }
+
+    showPage(currentIndex);
+
+    let touchStartY = 0;
+
+    document.addEventListener("touchstart", (e) => {
+      touchStartY = e.touches[0].clientY;
+    });
+
+    document.addEventListener("touchend", (e) => {
+      const touchEndY = e.changedTouches[0].clientY;
+      const deltaY = touchEndY - touchStartY;
+
+      if (deltaY < -30 && currentIndex < sections.length - 1) {
+        currentIndex++;
+        showPage(currentIndex);
+      } else if (deltaY > 30 && currentIndex > 0) {
+        currentIndex--;
+        showPage(currentIndex);
+      }
+    });
+  </script>
 </body>
 </html>
