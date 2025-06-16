@@ -1,94 +1,99 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BayProNZ</title>
+  <title>What We Do</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shutterstone&family=Lato:wght@300&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      font-family: 'Lato', 'Verdana', sans-serif;
+      background-color: #b08b66;
       overflow: hidden;
-      font-family: Verdana, sans-serif;
-      background-color: #f2f2f2;
     }
-    section {
-      width: 100vw;
+
+    .section {
       height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      position: relative;
+      color: #fff;
       text-align: center;
-      transition: transform 0.5s ease;
     }
+
     h1 {
       font-family: 'Shutterstone', cursive;
-      font-size: 2.5rem;
-      color: #042b67;
+      font-size: 3rem;
       margin: 0;
     }
-    p {
-      font-family: Verdana, sans-serif;
-      font-size: 1.2rem;
-      color: #000;
-      max-width: 80%;
+
+    h2 {
+      margin: 1.5rem 0 0;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
     }
-    .swipe-text {
-      font-family: 'Lato Light', sans-serif;
-      margin-top: 2rem;
-      color: #000;
+
+    .diamond {
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      transform: rotate(45deg);
+      position: absolute;
     }
-    .menu-icon {
+
+    .diamond:nth-child(1) {
+      top: 20%;
+      left: 25%;
+    }
+
+    .diamond:nth-child(2) {
+      top: 25%;
+      right: 25%;
+    }
+
+    .swipe {
+      position: absolute;
+      bottom: 2.5rem;
+      font-size: 0.9rem;
+    }
+
+    .menu {
       position: absolute;
       bottom: 1rem;
       right: 1rem;
       cursor: pointer;
     }
-    .accent {
-      position: absolute;
-      width: 1rem;
-      height: 1rem;
-      background-color: #7b4015;
+
+    .menu-line {
+      width: 25px;
+      height: 3px;
+      background-color: #003366;
+      margin: 4px 0;
     }
   </style>
 </head>
 <body>
-  <div id="pages">
-    <section class="page" id="page1">
-      <h1>What We Do...</h1>
-      <p>Property Management & Visitor Accommodation</p>
-      <div class="swipe-text">swipe ↑</div>
-    </section>
-    <section class="page" id="page2">
-      <h1>Where?</h1>
-      <p>Omokoroa, Whakamarama, Te Puna, Bethlehem, Tauranga, Tauriko, Welcome Bay, Mount Maunganui</p>
-      <div class="swipe-text">swipe ↑</div>
-    </section>
-    <!-- Add additional sections for page3 to page6 similarly -->
-  </div>  <script>
-    let currentPage = 0;
-    const sections = document.querySelectorAll('.page');
-    let startY = 0;
-    let endY = 0;
 
-    function showPage(index) {
-      document.getElementById('pages').style.transform = `translateY(-${index * 100}vh)`;
-    }
+  <div class="section">
+    <div class="diamond"></div>
+    <div class="diamond"></div>
 
-    document.addEventListener('touchstart', e => {
-      startY = e.touches[0].clientY;
-    });
+    <h1>What We<br>Do…</h1>
+    <h2>Property Management<br>& Visitor Accommodation</h2>
 
-    document.addEventListener('touchend', e => {
-      endY = e.changedTouches[0].clientY;
-      const threshold = 50;
-      if (startY - endY > threshold && currentPage < sections.length - 1) {
-        currentPage++;
-        showPage(currentPage);
-      } else if (endY - startY > threshold && currentPage > 0) {
-        currentPage--;
-        showPage(currentPage);
-      }
-    });
-  </script></body>
+    <div class="swipe">↑ Swipe up</div>
+
+    <div class="menu">
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+      <div class="menu-line"></div>
+    </div>
+  </div>
+
+</body>
 </html>
